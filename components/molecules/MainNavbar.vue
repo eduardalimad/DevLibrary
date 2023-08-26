@@ -1,0 +1,62 @@
+<template>
+    <nav>
+        <img src="../../static/icon/tutiBooks.png" alt="" class="logoTutiBooks">
+        <ul>
+            <li>Home</li>
+            <li>Livros</li>
+            <li class="button"><ButtonPirula title=" + Adicionar"/></li>
+        </ul>
+    </nav>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+    
+})
+</script>
+<style lang="scss" scoped>
+    nav{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        // background: var(--bgMain);
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0 6vw;
+        color: white;
+        z-index: 9;
+        align-items: center;
+        height: 5rem;
+        position: relative;
+        ul{
+            display: flex;
+            list-style: none;
+            width: 38%;
+            align-items: center;
+            cursor: pointer;
+            letter-spacing: 2px;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+        @media only screen and (max-width: 600px) {
+            // background: var(--primary);
+
+            .logoTutiBooks{
+                height: 20px;
+            }
+            ul{
+            gap: 1rem;
+            margin: .5rem;
+            justify-content: space-evenly;
+            .button{
+                display: none;
+            }
+            }
+        }
+    }
+    
+</style>
