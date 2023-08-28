@@ -27,8 +27,8 @@ export default Vue.extend({
                 return this.color = 'purple'
             } else if (this.colorBtn === 'pink') {
                 return this.color = 'pink'
-            } else if ( this.colorBtn === 'blue') {
-                return this.color = 'blue'
+            } else if ( this.colorBtn === 'white') {
+                return this.color = 'white'
             } else if ( this.colorBtn === 'red') {
                 return this.color = 'red'
             }
@@ -44,6 +44,16 @@ export default Vue.extend({
     .purple {
     background: #6A6AF9;
 }
+    .white {
+        background: #FFF;
+        color: #69E384;
+        font-size: 24px;
+        font-weight: 600;
+        border: 2px solid #69E384;
+        width: 238px;
+        height: 53px;
+
+    }
     button{
         color: white;
         background-color: #040426;
@@ -53,5 +63,6 @@ export default Vue.extend({
         border: 1px solid rgba(255, 255, 255, 0.20);
         font-weight: 500;
         letter-spacing: 1px;
+        
     }
 </style>

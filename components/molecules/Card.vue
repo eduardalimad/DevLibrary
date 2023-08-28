@@ -43,7 +43,7 @@ export default Vue.extend({
   background: #fff;
   box-shadow: 0px 2px 10px 1px rgba(255, 255, 255, 0.25);
   color: #070736;
-  padding: 2rem;
+  padding: 1.6rem;
   gap: 10px;
 
   .cardTitle {

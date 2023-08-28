@@ -1,7 +1,7 @@
 <template>
   <div>
     <MainNavbar/>
-    <ContentMain />
+    <Home />
   </div>
   
 </template>

@@ -6,6 +6,10 @@
             <Card titleCard="A menina que Roubava" legenda="John Green" produto="purple"/>
             <Card titleCard="A menina que Roubava" legenda="tshsj" produto="purple"/>
             <Card titleCard="A menina que Roubava" legenda="tshsj" produto="pink"/>
+            <Card titleCard="A menina que Roubava" legenda="Jose" produto="pink"/>
+            <Card titleCard="A menina que Roubava" legenda="John Green" produto="purple"/>
+            <Card titleCard="A menina que Roubava" legenda="tshsj" produto="purple"/>
+            <Card titleCard="A menina que Roubava" legenda="tshsj" produto="pink"/>
         </section>
 
     </div>

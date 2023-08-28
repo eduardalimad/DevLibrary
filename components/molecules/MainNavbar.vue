@@ -2,10 +2,17 @@
     <nav>
         <img src="../../static/icon/tutiBooks.png" alt="" class="logoTutiBooks">
         <ul>
-            <li>Home</li>
-            <li>Livros</li>
-            <li class="button"><ButtonPirula title=" + Adicionar"/></li>
+            <nuxt-link to="/">Home</nuxt-link>
+            <nuxt-link to="/books">Livros</nuxt-link>
+            <li class="button">
+                <ButtonPirula title=" + Adicionar" @click.native="showModal"/>
+            </li>
         </ul>
+
+        <div v-if="this.modal == true">
+            <TemplateModal @modalEmitStatus="closeModal" />
+        </div>
+            
     </nav>
 </template>
 
@@ -13,7 +20,20 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+    data(){
+        return{
+            modal:false,
+        }
+    },
+    methods:{
+        showModal(){
     
+            this.modal = true
+        },
+        closeModal(){
+            this.modal = false
+        }
+    }
 })
 </script>
 <style lang="scss" scoped>
@@ -41,6 +61,10 @@ export default Vue.extend({
             letter-spacing: 2px;
             justify-content: flex-end;
             gap: 1rem;
+
+            a{
+                color: white;
+            }
         }
         @media only screen and (max-width: 600px) {
             // background: var(--primary);
