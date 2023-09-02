@@ -55,9 +55,7 @@ export default Vue.extend({
     },
   async send(){
     await http.newBook(this.book).then((response) => {
-    
-        console.log(response);
-        
+        console.log(response);        
       });
     }
   },
