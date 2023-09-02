@@ -10,7 +10,7 @@ Clonando o Projeto
 ```
 git clone https://github.com/eduardalimad/DevLibrary.git
 ```
-Entre na pasta de backendBooks
+Entre na pasta de backend
 ``` 
 npm install 
 ``` 
