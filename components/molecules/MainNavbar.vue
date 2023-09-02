@@ -1,6 +1,8 @@
 <template>
     <nav>
-        <img src="../../static/icon/tutiBooks.png" alt="" class="logoTutiBooks">
+        <nuxt-link to="/">
+            <img src="../../static/icon/DevLibrary.svg" alt="" class="logoTutiBooks" >
+        </nuxt-link>
         <ul>
             <nuxt-link to="/">Home</nuxt-link>
             <nuxt-link to="/books">Livros</nuxt-link>
@@ -9,7 +11,7 @@
             </li>
         </ul>
 
-        <div v-if="this.modal == true">
+        <div v-if="modal == true">
             <TemplateModal @modalEmitStatus="closeModal" />
         </div>
             
@@ -65,7 +67,11 @@ export default Vue.extend({
             a{
                 color: white;
             }
+            a.nuxt-link-exact-active {
+            color: var(--textColor) !important;
+            }   
         }
+
         @media only screen and (max-width: 600px) {
             // background: var(--primary);
 

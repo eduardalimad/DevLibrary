@@ -14,19 +14,20 @@
 
       <form action="">
         <label for="uname"><b>Nome:</b></label>
-        <input type="text" placeholder="Ex: Desenvolvimento NodeJS " />
+        <input type="text" placeholder="Ex: Desenvolvimento NodeJS " v-model="book.title" />
 
         <label for="uname"><b>Autor:</b></label>
-        <input type="text" placeholder="Ex: José Monteiro Valasques" />
+        <input type="text" placeholder="Ex: José Monteiro Valasques" v-model="book.autor" />
 
         <label for="uname"><b>Descrição:</b></label>
         <input
           type="text"
           placeholder="Ex: Este Livro explica o desenvolvimento desde o..."
+          v-model="book.descricao"
         />
 
         <div style="margin-top: 2rem">
-          <ButtonPirula title="Adicionar" colorBtn="purple" />
+          <ButtonPirula title="Adicionar" colorBtn="purple" @click.native="send" />
         </div>
       </form>
     </div>
@@ -35,17 +36,30 @@
   
   <script lang="ts">
 import Vue from 'vue'
+import http  from '@/service/index';
 
 export default Vue.extend({
   data() {
     return {
       modal: false,
+      book:{
+        title: "",
+        autor:"",
+        descricao: ""
+      }
     }
   },
   methods: {
     closeModal() {
       this.$emit('modalEmitStatus', false)
     },
+  async send(){
+    await http.newBook(this.book).then((response) => {
+    
+        console.log(response);
+        
+      });
+    }
   },
 })
 </script>
@@ -58,7 +72,7 @@ export default Vue.extend({
     right: 0;
     display: flex;
     justify-content: center;
-    background-color: #19799152;
+    background-color: rgb(32 7 54 / 80%);
     z-index: 10;
     .modal {
         text-align: center;
@@ -123,9 +137,9 @@ export default Vue.extend({
         }
     }
     }
-    @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
         .modal {
           width: 28rem;
         }
-    }
+}
 </style>

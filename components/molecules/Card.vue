@@ -5,9 +5,7 @@
       por <span class="cardLegenda_Span"> {{ legenda }}</span>
     </p>
     <p class="cardSinopse">
-      As regras universais de arquitetura de software aumentam dramaticamente a
-      produtividade dos desenvolvedores ao longo da vida dos sistemas de
-      software..
+    {{ sinopse }}
     </p>
     <div class="button">
       <section v-if="produto === 'pink'">
@@ -26,6 +24,7 @@ export default Vue.extend({
   props: {
     titleCard: String,
     legenda: String,
+    sinopse: String,
     produto: String,
   },
   data() {
@@ -62,6 +61,11 @@ export default Vue.extend({
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
 
   .button {
