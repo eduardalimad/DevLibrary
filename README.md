@@ -1,8 +1,8 @@
 # DevLibrary
 Catálogo de livros: O objetivo do projeto é aplicar práticas de criação da estrutura backend em Nest.js e, no frontend, realizar a integração de métodos GET e POST.
 
-![image](https://github.com/eduardalimad/DevLibrary/assets/99693673/2b5d8416-b182-4602-9b01-69a9873c4c96)
-![image](https://github.com/eduardalimad/DevLibrary/assets/99693673/9c6e6f75-8e4f-4313-9d6c-2285fc0dded1)
+![image](https://github.com/eduardalimad/DevLibrary/assets/99693673/cf0577d8-eacf-4678-8ee3-099a4711736b)
+
 
 ## 🚀 Inicializando o Backend:
 
